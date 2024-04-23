@@ -8,6 +8,25 @@
 </div>
 
 
+
+<!--Demo version-->
+
+
+<div class="container mt-5 mb-5">
+  <div class="row mt-4">
+    <div class="col-md-6" *ngFor="let article2 of news2" style="margin-bottom:2rem">
+      <div class="card h-100">
+        <img [src]="article2.image" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ article2.title }}</h5>
+          <p class="card-text">{{ article2.description }}</p>
+          <a [href]="article2.url" class="btn btn-primary">Leggi di più</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container mt-5 mb-5">
   <!-- Seconda sezione con card -->
   <div class="row mt-4">

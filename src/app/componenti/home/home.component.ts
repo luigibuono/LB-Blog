@@ -39,8 +39,10 @@ export class HomeComponent {
     
   ];
   news!: any[];
+  news2!: any[];
 
   ngOnInit() {
+    this.getGNews();
     this.getNews();
     this.startInterval();
   }
@@ -52,6 +54,13 @@ export class HomeComponent {
     this.newsService.getNews()
       .subscribe(data => {
         this.news = data.articles; // Supponendo che i dati dell'API siano strutturati in modo simile a un array di articoli
+      });
+  }
+
+  getGNews(): void {
+    this.newsService.getGNews()
+      .subscribe(data => {
+        this.news2 = data.articles; // Supponendo che i dati dell'API siano strutturati in modo simile a un array di articoli
       });
   }
 

@@ -1,0 +1,56 @@
+/* header.component.css */
+/*
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-static-top {
+  position: static;
+}
+
+.navbar-collapse {
+  max-height: 0;
+  overflow: hidden;
+  animation: slideDown 1.8s ease;
+}
+
+.navbar-collapse.show {
+  max-height: 500px;
+  animation: slideUp 1.8s ease;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 500px;
+  }
+  to {
+    max-height: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 500px;
+  }
+}
+*/
+.nav-link {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem; /* Aggiungiamo padding top/bottom di 0.5rem e padding left/right di 1rem */
+  text-decoration: none; /* Rimuoviamo il sottolineato di default */
+  transition: background-color 0.3s ease; /* Aggiungiamo una transizione al cambio di colore di sfondo */
+}
+
+.nav-link:hover {
+  background-color: #0b5ed7; /* Cambiamo il colore di sfondo al passaggio del mouse */
+}

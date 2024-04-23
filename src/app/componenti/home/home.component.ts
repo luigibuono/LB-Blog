@@ -38,8 +38,10 @@ export class HomeComponent {
     // Aggiungi altre card...
     
   ];
-  news!: any[];
-  news2!: any[];
+
+
+  news: any[] = [];
+  news2: any[] = [];
 
   ngOnInit() {
     this.getGNews();
@@ -47,20 +49,17 @@ export class HomeComponent {
     this.startInterval();
   }
 
-
-  constructor(private newsService: NewsService) { }
+  getGNews(): void {
+    this.newsService.getGNews()
+      .subscribe(data => {
+        this.news2 = data.articles; 
+      });
+  }
   
   getNews(): void {
     this.newsService.getNews()
       .subscribe(data => {
-        this.news = data.articles; // Supponendo che i dati dell'API siano strutturati in modo simile a un array di articoli
-      });
-  }
-
-  getGNews(): void {
-    this.newsService.getGNews()
-      .subscribe(data => {
-        this.news2 = data.articles; // Supponendo che i dati dell'API siano strutturati in modo simile a un array di articoli
+        this.news = data.articles;
       });
   }
 
